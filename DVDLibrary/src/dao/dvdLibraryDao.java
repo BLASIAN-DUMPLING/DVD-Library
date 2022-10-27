@@ -21,4 +21,5 @@ public interface dvdLibraryDao {
     Map<String, DvD> getDvdsByMpaaRating(String mpaaRating);
     Map<String, DvD> getDvdsByDirector(String director);
     Map<String, DvD> getDvdsByStudio(String studio);
+    DvD changeReleaseDate(String title, String newReleaseDate) throws DvDLibraryDaoException;
 }

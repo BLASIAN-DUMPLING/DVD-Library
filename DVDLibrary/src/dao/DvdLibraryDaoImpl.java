@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDate;
+//import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -47,6 +48,7 @@ return newDvD;
         public DvD removeDvD(String title) throws DvDLibraryDaoException {
           loadLibrary();
           DvD removeDvD = dvd.remove (title);
+         writeLibrary();
           return removeDvD;
         }
 
@@ -147,7 +149,7 @@ private void writeLibrary() throws DvDLibraryDaoException {
 
 
 @Override
-public DvD changeReleaseDate(String title, LocalDate newReleaseDate) throws DvDLibraryDaoException {
+public DvD changeReleaseDate(String title, String newReleaseDate) throws DvDLibraryDaoException {
   loadLibrary();
   DvD dvdToEdit = dvd.get(title);
   dvdToEdit.setReleaseDate(newReleaseDate);
@@ -178,4 +180,13 @@ public Map<String, DvD> getDvdsByStudio(String studio) {
  
   return null;
 }
+
+@Override
+public DvD changeReleaseDate(String title, LocalDate newReleaseDate) throws DvDLibraryDaoException {
+  
+  return null;
+}
+
+
+
 }

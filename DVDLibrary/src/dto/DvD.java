@@ -1,10 +1,10 @@
 package dto;
-import java.time.LocalDate;
+
 
 
 public class DvD {
 	private String title;
-   	private LocalDate releaseDate;
+   	private String releaseDate;
     private String mpaaRating;
     private String directorName;
     private String userRating;
@@ -19,11 +19,11 @@ public String getTitle() {
 }
 
 
-public LocalDate getReleaseDate() {
+public String getReleaseDate() {
 	return releaseDate;
 }
 
-public void setReleaseDate(LocalDate dvdTokens) {
+public void setReleaseDate(String dvdTokens) {
 	this.releaseDate = dvdTokens;
 } 
 
@@ -62,8 +62,7 @@ public void setStudio(String studio) {
 public DvD put(String title2, DvD dvd) {
 	return null;
 }
-public void setReleaseDate(String string) {
-}
+
 
 
 }

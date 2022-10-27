@@ -124,9 +124,6 @@ private void editDvd() throws DvDLibraryDaoException {
     }
     }
 }
-/*private int geteditMenuSelection(){
-    return view.printEditMenuAndGetSelection();
-} */
 
 private void editReleaseDate(String title) throws DvDLibraryDaoException  {
     view.displayEditReleaseDateBanner();
@@ -156,9 +153,7 @@ private void editStudioName(String title) throws DvDLibraryDaoException  {
     dao.changeStudioName(title, newStudioName);
     view.displayEditDvdBanner();
 }
-/**
- * 
- */
+
 private void findDvD() throws DvDLibraryDaoException  {
     view.displayFindDvdsBanner();
     int findDvdsSelection = 0;
